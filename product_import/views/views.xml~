@@ -1,0 +1,86 @@
+<odoo>
+  <data>
+      <record id="view_coduriclient_form" model="ir.ui.view">
+        <field name="name">coduri.client.form</field>
+        <field name="model">coduri.client</field>
+            <field name="arch" type="xml">
+                <form string="Coduri Client">
+                    <group>
+                        <group>
+                            <field name="lista_clienti"/>
+                        </group>
+                        <group>
+                            <field name="cod_la_client"/>
+                        </group>
+                        <group>
+                            <field name="den_la_client"/>
+                        </group>
+                        <group>
+                            <field name="product_id"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+      </record>
+
+      <record id="view_coduri_client_tree" model="ir.ui.view">
+            <field name="name">coduri.client.tree</field>
+            <field name="model">coduri.client</field>
+            <field name="arch" type="xml">
+                <tree string="Coduri Client">
+                    <field name="lista_clienti"/>
+                    <field name="cod_la_client"/>
+                    <field name="den_la_client"/>
+                </tree>
+            </field>
+        </record>
+
+      <record id="view_coduriclient_search" model="ir.ui.view">
+            <field name="name">coduri.client.search</field>
+            <field name="model">coduri.client</field>
+            <field name="arch" type="xml">
+                <search string="Coduri Client">
+                    <field name="lista_clienti"/>
+                    <field name="cod_la_client"/>
+                    <field name="den_la_client"/>
+                </search>
+            </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="coduri_client_action">
+            <field name="name">Coduri Client</field>
+            <field name="res_model">coduri.client</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_coduri_client_tree"/>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_coduriclient_search"/>
+       </record>
+
+<!--      <menuitem name="Coduri Client"
+            id="menu_coduri_client_action"/>
+      <menuitem action="coduri_client_action" id="coduri_client_action_sub"
+            parent="sale.sale_menu_root"
+            sequence="0"/> -->
+
+      <record id="product_template_view_form_inherit_coduri_clienti" model="ir.ui.view">
+            <field name="name">product.template.form.inherit.coduri.clienti</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Coduri Client">
+                           <field name="prod_id" string="Cod la Client">
+                               <separator string="Coduri Clienti"/>
+                               <tree string="Coduri" editable="bottom">
+                                    <field name="lista_clienti" string="Lista Clienti"/>
+                                    <field name="cod_la_client" string="Cod la Client"/>
+                                    <field name="den_la_client" string="Denumire la Client"/>
+                               </tree>
+                           </field>
+                    </page>
+                </notebook>
+            </field>
+      </record>
+
+  </data>
+</odoo>
