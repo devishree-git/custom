@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="assets_backend" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/web_user_shortcut/static/src/css/styles.css"/>
+                <script type="text/javascript" src="/web_user_shortcut/static/src/js/scripts.js"></script>
+            </xpath>
+        </template>
+
+        <record id="view_web_user_shortcut_tree" model="ir.ui.view">
+            <field name="name">res.users.shortcut.tree</field>
+            <field name="model">res.users.shortcut</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom" create="0">
+                    <field name="priority" widget="handle"/>
+                    <field name="name"/>
+                    <field name="icon"/>
+                    <field name="menu_id" readonly="1"/>
+                    <field name="action_id" readonly="1"/>
+                    <button name="action_remove" icon="fa-trash-o" type="object" string="Remove"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="actions_web_user_shortcut" model="ir.actions.act_window">
+            <field name="name">Shortcut</field>
+            <field name="res_model">res.users.shortcut</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="domain">[('user_id','=', uid)]</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

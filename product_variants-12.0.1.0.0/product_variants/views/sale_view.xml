@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="action_sale_product_configure" model="ir.actions.act_window">
+			<field name="name">Product Configure</field>
+			<field name="res_model">sale.line.product.confg</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					You have'nt created any claims yet.
+				</p>
+			</field>
+		</record>
+		
+		<record id="view_order_line_form_editable_list" model="ir.ui.view">
+			<field name="name">sale.order.line.form.editable.list</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='order_line']/tree" position="attributes">
+					<attribute name="editable"/>
+				</xpath>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_product_attribute_form">
+			<field name="name">sale.order.form.variant.inherit</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="arch" type="xml">
+				 <field name="product_id" position="attributes">
+					<attribute name="invisible">1</attribute>
+				 </field>
+				<field name="product_id" position="after">
+					<field name="pdt_id"/>
+					<field name="product_conf" widget="one2many_list" context="{'product_tmpl_id':pdt_id}">
+						<tree string="Variants" editable="bottom">
+							<field name="pdt_attribute"/>
+							<field name="pdt_attribute_value" domain="[('attribute_id', '=', pdt_attribute)]"/>
+						 </tree>
+					</field>
+				</field>
+			</field>
+		</record>    
+	</data>
+
+</odoo>

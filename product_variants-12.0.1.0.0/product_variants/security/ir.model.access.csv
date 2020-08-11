@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_line_product_confg,access.sale.line.product.confg,model_sale_line_product_confg,base.user_root,1,1,1,1
+

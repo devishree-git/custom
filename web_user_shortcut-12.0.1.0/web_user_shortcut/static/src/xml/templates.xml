@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="Systray.ShortcutMenu">
+        <li class="x_shortcut">
+            <a href="#" class="fa fa-bolt" data-toggle="dropdown"/>
+            <div class="oe_systray_shortcut_menu dropdown-menu dropdown-menu-right" role="menu">
+                <span class="oe_systray_shortcut_setting"><i class="fa fa-cog"/></span>
+            </div>
+        </li>
+    </t>
+    <t t-name="Systray.ShortcutMenu.Item">
+        <li>
+            <a href="javascript:void(0)"
+               t-att-data-active-id="shortcut.active_id"
+               t-att-data-id="shortcut.menu_id[0]" t-att-data-shortcut-id="shortcut.id"
+               t-att-data-action-id="shortcut.action_id" t-attf-title="{{shortcut.name}}">
+                <i t-attf-class="fa {{shortcut.icon}}"/>
+                <t t-esc="shortcut.name"/>
+            </a>
+        </li>
+    </t>
+    <t t-extend="ControlPanel">
+        <t t-jquery="ol.breadcrumb" t-operation="before">
+            <a class="oe_shortcut_toggle o_hidden fa fa-bolt"
+               title="Add / Remove Shortcut..."
+               href="javascript: void(0)"> </a>
+        </t>
+    </t>
+
+</templates>

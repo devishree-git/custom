@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_user_shortcut
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-16 04:53+0000\n"
+"PO-Revision-Date: 2020-03-16 11:57+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__action_id
+msgid "Action"
+msgstr "Hành động"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__active_id
+msgid "Active ID"
+msgstr "Mã bản ghi liên quan"
+
+#. module: web_user_shortcut
+#. openerp-web
+#: code:addons/web_user_shortcut/static/src/xml/templates.xml:27
+#, python-format
+msgid "Add / Remove Shortcut..."
+msgstr "Thêm/gỡ lối tắt"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__id
+msgid "ID"
+msgstr "Mã bản ghi"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: web_user_shortcut
+#: model:ir.model,name:web_user_shortcut.model_ir_ui_menu
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__menu_id
+msgid "Menu"
+msgstr "Trình đơn"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__priority
+msgid "Priority"
+msgstr "Độ ưu tiên"
+
+#. module: web_user_shortcut
+#: model_terms:ir.ui.view,arch_db:web_user_shortcut.view_web_user_shortcut_tree
+msgid "Remove"
+msgstr "Gỡ"
+
+#. module: web_user_shortcut
+#. openerp-web
+#: code:addons/web_user_shortcut/static/src/js/scripts.js:220
+#, python-format
+msgid "Remove this shortcut item?"
+msgstr "Gỡ lối tắt này?"
+
+#. module: web_user_shortcut
+#: model:ir.actions.act_window,name:web_user_shortcut.actions_web_user_shortcut
+msgid "Shortcut"
+msgstr "Lối tắt"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__name
+msgid "Shortcut Name"
+msgstr "Tên lối tắt"
+
+#. module: web_user_shortcut
+#: sql_constraint:res.users.shortcut:0
+msgid "Shortcut for this action already exists!"
+msgstr "Lối tắt cho mục này đã tồn tại"
+
+#. module: web_user_shortcut
+#: model:ir.model,name:web_user_shortcut.model_res_users_shortcut
+msgid "Shortcut menu"
+msgstr "Trình đơn lối tắt"
+
+#. module: web_user_shortcut
+#. openerp-web
+#: code:addons/web_user_shortcut/static/src/js/scripts.js:226
+#, python-format
+msgid "Shortcut name"
+msgstr "Tên lối tắt"
+
+#. module: web_user_shortcut
+#: model:ir.model.fields,field_description:web_user_shortcut.field_res_users_shortcut__user_id
+msgid "User Ref."
+msgstr "Người dùng lien quan"
